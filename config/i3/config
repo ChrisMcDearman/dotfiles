@@ -13,7 +13,8 @@ font pango:Fira Code 10
 exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf
 exec_always --no-startup-id flameshot
 exec_always --no-startup-id dunst
-exec_always --no-startup-id feh --bg-fill -r -z ~/Wallpapers/wp15.jpg
+#exec_always --no-startup-id feh --bg-fill -r -z ~/Wallpapers/sad.png
+exec_always --no-startup-id feh --bg-fill -r -z ~/Pictures/wallpapers/ocean.jpg
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

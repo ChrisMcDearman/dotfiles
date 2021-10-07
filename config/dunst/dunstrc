@@ -1,0 +1,57 @@
+[global]
+    monitor = 0
+    follow = mouse
+    geometry = "300x100-20-55"
+    indicate_hidden = yes
+    shrink = no
+    notification_height = 0
+    separator_height = 1
+    padding = 20
+    horizontal_padding = 20
+    frame_color = "#c1c1c1"
+    separator_color = frame
+    sort = yes
+    idle_threshold = 120
+
+    font = Fira Code Medium 10
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b"
+    vertical_alignment = center
+    show_age_threshold = 60
+    word_wrap = yes
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    startup_notification = false
+    verbosity = mesg
+    corner_radius = 0
+    ignore_dbusclose = false
+    force_xinerama = false
+    mouse_right_click = close_current
+    mouse_left_click = do_action, close_current
+    mouse_middle_click = close_all
+    
+    icon_position = left
+    min_icon_size = 0
+    max_icon_size = 64
+
+[urgency_low]
+    background = "#A1B56C"
+    foreground = "#181818"
+    timeout = 5
+
+[urgency_normal]
+    background = "#181818"
+    foreground = "#D8D8D8"
+    timeout = 10
+
+[urgency_critical]
+    background = "#AB4642"
+    foreground = "#181818"
+    timeout = 20

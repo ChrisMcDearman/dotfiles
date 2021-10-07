@@ -25,8 +25,11 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
+
+colorscheme monokai_pro
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
@@ -44,14 +47,14 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 
 " Set golang highlighting
-"let g:go_highlight_types = 1
-"let g:go_highlight_fields = 1
-"let g:go_highlight_functions = 1
-"let g:go_highlight_function_calls = 1
-"let g:go_highlight_operators = 1
-"let g:go_highlight_extra_types = 1
-"let g:go_highlight_build_constraints = 1
-"let g:go_highlight_generate_tags = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
 
 " air-line
 let g:airline_powerline_fonts = 1
