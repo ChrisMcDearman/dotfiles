@@ -7,5 +7,8 @@ mkdir ~/.fonts
 cp feather.ttf ~/.fonts
 fc-cache -f -v
 
-cp -r config/* ~/.config
-cp -r home/.*rc ~/.
+cp -r -v config/* ~/.config
+cp -r -v home/.*rc ~/.
+
+mkdir ~/Pictures/wallpapers
+cp -v wallpaper.jpg ~/Pictures/wallpapers
