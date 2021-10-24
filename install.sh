@@ -12,3 +12,5 @@ cp -r -v home/.*rc ~/.
 
 mkdir ~/Pictures/wallpapers
 cp -v wallpaper.jpg ~/Pictures/wallpapers
+
+wget https://www.ipvanish.com/software/configs/configs.zip
