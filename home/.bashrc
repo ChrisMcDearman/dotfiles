@@ -3,9 +3,11 @@
 
 #Prompt
 PS1='\w/ → '
+# PS1='[\u@\h \W]\$ '
 
 #Aliases
 alias ls='ls --color=auto'
+alias la='ls -a'
 alias cls='clear'
 alias py='python3'
 alias pip='pip3'
