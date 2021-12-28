@@ -1,7 +1,7 @@
 #!/bin/sh
 sudo pacman -S ttf-fira-code flameshot feh i3-gaps kitty rofi ttf-hack pulseaudio pulseaudio-alsa pulseaudio-bluetooth dunst xorg-xbacklight brightnessctl
 
-yay -S picom-ibhagwan-git betterlockscreen nerd-fonts-hack
+yay -S picom-ibhagwan-git betterlockscreen nerd-fonts-hack polybar
 
 mkdir ~/.fonts
 cp feather.ttf ~/.fonts
