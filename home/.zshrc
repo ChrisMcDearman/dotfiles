@@ -8,7 +8,7 @@ compinit
 promptinit
 
 prompt_tophy_setup() {
-	PS1="[%F{magenta}%n%F{white}@%F{cyan}%m %F{green}%1~%F{white}]$ "
+	PS1="[%F{magenta}%n%F{white}@%F{blue}%m %F{green}%1~%F{white}]$ "
 }
 prompt_themes+=( tophy )
 
@@ -24,3 +24,4 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#8a8a8a,bold"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
