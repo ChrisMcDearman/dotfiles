@@ -14,14 +14,24 @@ prompt_themes+=( tophy )
 
 prompt tophy
 
-#Aliases
+# Aliases
 alias ls='ls --color=auto'
 alias la='ls -a'
 alias ytdl='youtube-dl'
 alias docker='sudo docker'
+
+# Exports
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#8a8a8a,bold"
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt SHARE_HISTORY
