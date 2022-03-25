@@ -29,6 +29,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
+# Use rofi-bluetooth to handle bluetooth connections
+bindsym $mod+b exec --no-startup-id rofi-bluetooth
+
 #apps shortcuts
 bindsym Print exec --no-startup-id flameshot gui
 
@@ -106,15 +109,11 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-for_window[class="feh"] floating toggle
-for_window[class="sxiv"] floating toggle
-
 gaps inner 15
 smart_gaps on
 smart_gaps inverse_outer
 smart_borders on
 smart_borders no_gaps
 hide_edge_borders smart_no_gaps
-new_window normal 0 px
 new_window none
 default_border none
