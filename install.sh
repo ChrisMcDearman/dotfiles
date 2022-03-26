@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo pacman -S i3-gaps kitty rofi dunst feh zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting
+sudo pacman -S --needed i3-gaps kitty rofi dunst feh zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting
 yay -S polybar picom-ibhagwan-git 
 
 cp -r -v config/* ~/.config
