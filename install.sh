@@ -1,12 +1,6 @@
 #!/bin/sh
-sudo pacman -S --needed i3-gaps kitty rofi dunst feh zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting
-yay -S polybar picom-ibhagwan-git 
+sudo pacman -S --needed i3-gaps kitty rofi dunst feh zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting ttf-fira-code
+yay -S polybar picom-ibhagwan-git rofi-bluetooth-git 
 
-cp -r -v config/* ~/.config
-cp -r -v home/.*rc ~/.
-touch ~/.zsh_history
-cp -r -v wallpapers ~/Pictures/
-
-chsh -s /usr/bin/zsh
 
 
