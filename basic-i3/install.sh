@@ -16,7 +16,7 @@ mkdir ~/.config/kitty
 
 cd ~/Repositories/dotfiles/basic-i3
 cp -r -v config/* ~/.config
-cp -r -v home/ ~/.
+cp -r -v home/. ~/.
 
 while true; do
     read -p "Do you want HiDPI? " yn
