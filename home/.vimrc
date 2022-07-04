@@ -1,8 +1,8 @@
-"set number
-"set lines=50 columns=150
+set number
 set background=dark
 set encoding=UTF-8
 set termguicolors
+set clipboard=unnamedplus
 
 " Tab Spaces
 set tabstop=2 shiftwidth=2
@@ -28,7 +28,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
-"colorscheme monokai_pro
+colorscheme monokai_pro
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
@@ -60,5 +60,3 @@ let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-
-

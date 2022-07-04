@@ -19,6 +19,12 @@ alias ls='ls --color=auto'
 alias la='ls -a'
 alias ytdl='youtube-dl'
 alias docker='sudo docker'
+alias i='sudo pacman -S --needed'
+alias ri='sudo pacman -S'
+alias u='yay'
+alias q='sudo pacman -Q'
+alias r='sudo pacman -Rns'
+alias rc='sudo pacman -Rcns'
 
 # Exports
 export HISTFILE=~/.zsh_history
