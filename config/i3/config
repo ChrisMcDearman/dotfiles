@@ -14,7 +14,7 @@ exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf
 exec_always --no-startup-id flameshot
 exec_always --no-startup-id dunst
 #exec_always --no-startup-id feh --bg-fill -r -z ~/Wallpapers/sad.png
-exec_always --no-startup-id feh --bg-fill -r -z ~/Pictures/wallpapers/ocean.jpg
+exec_always --no-startup-id feh --bg-fill -r -z ~/Pictures/wallpapers/spencer.jpg
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -94,6 +94,8 @@ bindsym $mod+7 workspace number $ws7
 
 bindsym $mod+h split h
 bindsym $mod+v split v
+bindsym $mod+t split t
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -103,11 +105,25 @@ bindsym $mod+Shift+5 move container to workspace number $ws5
 bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
 
-bindsym $mod+shift+x exec betterlockscreen -l dim
-
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+set $Locker betterlockscreen -l && sleep 1
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+x mode "$mode_system"
 
 gaps inner 15
 smart_gaps on
@@ -116,4 +132,9 @@ smart_borders on
 smart_borders no_gaps
 hide_edge_borders smart_no_gaps
 new_window none
-default_border none
+default_border pixel 5
+
+client.focused #d8d8d8 #d8d8d8 #d8d8d8 #e3dcb6 #e3dcb6
+client.focused_inactive #d8d8d8 #d8d8d8 #d8d8d8 #858275 #858275
+client.unfocused #d8d8d8 #d8d8d8 #d8d8d8 #858275 #858275
+client.urgent #d8d8d8 #d8d8d8 #d8d8d8 #858275 #858275
