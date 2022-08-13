@@ -1,5 +1,9 @@
 #!/bin/sh
-sudo pacman -S --needed zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting ttf-fira-code i3-gaps kitty rofi dunst feh ttf-fira-code brightnessctl
+sudo pacman -S --needed zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting ttf-fira-code i3-gaps kitty rofi dunst feh ttf-fira-code brightnessctl base-devel
+
+git clone https://aur.archlinux.org/yay.git ~/Repositories/yay
+cd ~/Repositories/yay
+makepkg -si
 
 yay -S polybar picom-ibhagwan-git rofi-bluetooth-git spotify
 

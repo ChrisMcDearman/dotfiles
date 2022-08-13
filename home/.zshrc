@@ -25,7 +25,6 @@ alias u='yay'
 alias q='sudo pacman -Q'
 alias r='sudo pacman -Rns'
 alias rc='sudo pacman -Rcns'
-alias vim='nvim'
 alias ssh='kitty +kitten ssh'
 alias sv='ssh chris@192.168.1.223'
 
