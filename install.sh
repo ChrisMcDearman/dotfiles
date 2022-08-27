@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo pacman -S --needed zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting ttf-fira-code i3-gaps kitty rofi dunst feh ttf-fira-code brightnessctl base-devel
+sudo pacman -S --needed zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting ttf-fira-code base-devel
 
 git clone https://aur.archlinux.org/yay.git ~/Repositories/yay
 cd ~/Repositories/yay
