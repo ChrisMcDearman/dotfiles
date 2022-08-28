@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo pacman -S --needed zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting ttf-hack ttf-dejavu noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code base-devel flatpak fwupd i3-gaps kitty rofi dunst feh brightnessctl xdg-user-dirs
+sudo pacman -S --needed zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting ttf-hack ttf-dejavu noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code base-devel flatpak fwupd i3-gaps kitty rofi dunst feh brightnessctl xdg-user-dirs xclip emacs neovim rust-racer
 
 xdg-user-dirs-update
 
@@ -10,6 +10,8 @@ makepkg -si
 yay -S spotify polybar picom-ibhagwan-git rofi-bluetooth-git
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+rustup component add rls
 
 cp -r -v config/* ~/.config
 cp -r -v home/.*rc ~/.
