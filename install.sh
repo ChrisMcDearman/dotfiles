@@ -7,7 +7,7 @@ git clone https://aur.archlinux.org/yay.git ~/Repositories/yay
 cd ~/Repositories/yay
 makepkg -si
 
-yay -S spotify polybar picom-ibhagwan-git rofi-bluetooth-git
+yay -S spotify polybar picom-ibhagwan-git rofi-bluetooth-git betterlockscreen
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
