@@ -71,5 +71,7 @@ function! Terminal()
 endfunction
 
 nmap <A-t> :call Terminal()<CR>
+nmap <C-f> :Files<CR>
+nmap <C-b> :Buffers<CR>
 
 let g:lsp_diagnostics_echo_cursor = 1
