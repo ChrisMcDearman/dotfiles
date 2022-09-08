@@ -3,6 +3,8 @@ set background=dark
 set encoding=UTF-8
 set termguicolors
 set clipboard=unnamedplus
+set number relativenumber
+set nu rnu
 
 " Tab Spaces
 set tabstop=2 shiftwidth=2
@@ -26,6 +28,8 @@ Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'phanviet/vim-monokai-pro'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -67,3 +71,5 @@ function! Terminal()
 endfunction
 
 nmap <A-t> :call Terminal()<CR>
+
+let g:lsp_diagnostics_echo_cursor = 1
