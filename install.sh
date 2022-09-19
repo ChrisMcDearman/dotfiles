@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo pacman -S --needed zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting ttf-hack ttf-dejavu noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code base-devel flatpak fwupd i3-gaps kitty rofi dunst feh brightnessctl xdg-user-dirs xclip emacs neovim rust-racer
+sudo pacman -S --needed zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting ttf-hack ttf-dejavu noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code base-devel flatpak fwupd i3-gaps kitty rofi dunst feh brightnessctl xdg-user-dirs xclip sel emacs neovim rust-racer
 
 xdg-user-dirs-update
 
