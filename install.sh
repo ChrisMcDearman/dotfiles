@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Packages
-sudo pacman -S --needed zsh zsh-completions ttf-hack ttf-dejavu noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code base-devel flatpak fwupd i3-gaps kitty rofi dunst feh brightnessctl xdg-user-dirs xclip sel emacs neovim rust-racer ranger
+sudo pacman -S --needed zsh zsh-completions ttf-hack ttf-dejavu noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code base-devel flatpak fwupd i3-gaps kitty rofi dunst feh brightnessctl xdg-user-dirs xclip xsel emacs neovim ranger
 
 xdg-user-dirs-update
 
