@@ -16,7 +16,7 @@ promptinit
 
 #Prompt
 prompt_tophy_setup() {
-        PS1="[%F{magenta}%n%F{white}@%F{blue}%m %F{green}%1~%F{white}]$ "
+        PS1="[%F{33}%n%F{white}@%F{33}%m %F{white}%1~%F{reset}]$ "
 }
 prompt_themes+=( tophy )
  
