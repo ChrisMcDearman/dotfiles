@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Packages
-sudo pacman -S --needed zsh zsh-completions ttf-hack ttf-dejavu noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code base-devel flatpak fwupd i3-gaps kitty rofi dunst feh brightnessctl xdg-user-dirs xclip xsel emacs neovim ranger
+sudo pacman -S --needed zsh zsh-completions ttf-hack ttf-dejavu noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code base-devel flatpak fwupd xdg-user-dirs xclip xsel emacs neovim ranger
 
 xdg-user-dirs-update
 
@@ -10,10 +10,10 @@ git clone https://aur.archlinux.org/yay.git ~/Repositories/yay
 cd ~/Repositories/yay
 makepkg -si
 
-yay -S spotify polybar picom-ibhagwan-git rofi-bluetooth-git rofi-wifi-menu-git betterlockscreen
+yay -S spotify gnome-browser-connector
 
 # OhMyZsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
