@@ -20,6 +20,8 @@ vim.opt.undodir = vim.fn.expand('~/.vim/undodir')
 vim.opt.undofile = true
 vim.wo.relativenumber = true
 
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 ---
 -- Old VIM Script Commands
 --
