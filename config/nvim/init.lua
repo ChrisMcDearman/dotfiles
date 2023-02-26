@@ -81,10 +81,7 @@ require'clipboard-image'.setup {
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = {
-    'bashls',
     'luau_lsp',
-    'marksman',
-    'powershell_es',
   },
 	automatic_installation = true,
 })
