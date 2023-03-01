@@ -44,6 +44,25 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
+   use { "karb94/neoscroll.nvim" }
+  -- use { 'psliwka/vim-smoothie' }
+  use { "simrat39/inlay-hints.nvim",
+    config = function()
+      require("inlay-hints").setup {
+        show_parameter_hints = true,
+        show_chaining_hints = true,
+        show_type_hints = true,
+        type_hints_prefix = ": ",
+        max_len_align = false,
+        max_len_align_padding = 1,
+        right_align = false,
+        right_align_padding = 7,
+        highlight = "Comment",
+        prefix_highlight = "Statement",
+        enabled = { "TypeHint", "ChainingHint", "ParameterHint" },
+      }
+    end
+  }
   use {
     'weilbith/nvim-code-action-menu',
     cmd = 'CodeActionMenu',
