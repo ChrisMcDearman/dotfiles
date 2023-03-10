@@ -54,8 +54,8 @@ keymap("v", ">", ">gv", opts)
 -- Plugins --
 keymap("n", "<leader>a", ":Alpha<CR>", opts)
 
--- NvimTree
-keymap("n", "<leader>f", ":NvimTreeToggle<CR>", opts)
+-- NeoTree
+keymap("n", "<leader>f", ":Neotree<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)

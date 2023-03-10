@@ -45,7 +45,6 @@ vim.notify = function (msg, log_level, _opts)
 -- ========================================================================== --
 -- ==                         PLUGIN CONFIGURATION                         == --
 -- ========================================================================== --
-
 ---
 -- Colorscheme
 ---
@@ -120,7 +119,7 @@ require'nvim-treesitter.configs'.setup {
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require("nvim-tree").setup()
+-- require("nvim-tree").setup()
 
 --Pretty Status bar
 require('lualine').setup {

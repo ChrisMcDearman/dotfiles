@@ -88,7 +88,45 @@ return packer.startup(function(use)
   }
   -- File Explorer in Vim Ctrl+f
   use { "kyazdani42/nvim-web-devicons" }
-  use { "kyazdani42/nvim-tree.lua" }
+
+use {
+  "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = { 
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    },
+    config = function()
+      vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+      require("neo-tree").setup {
+        auto_close = true,
+        open_on_setup = true,
+        disable_netrw = true,
+        hijack_netrw = true,
+        update_cwd = true,
+        update_focused_file = {
+          enable = true,
+          update_cwd = true,
+          ignore_list = {}
+        },
+        system_open = {
+          cmd = nil,
+          args = {}
+        },
+        view = {
+          width = 30,
+          side = "left",
+          auto_resize = false,
+          mappings = {
+            custom_only = false,
+            list = {}
+          }
+        }
+      }
+    end
+  }
+
   use { "akinsho/bufferline.nvim", tag = "v3.*", requires = "kyazdani42/nvim-web-devicons" }
   use { "moll/vim-bbye" }
   -- Pretty status bar
