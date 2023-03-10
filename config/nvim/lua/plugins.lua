@@ -100,29 +100,8 @@ use {
     config = function()
       vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
       require("neo-tree").setup {
-        auto_close = true,
-        open_on_setup = true,
-        disable_netrw = true,
-        hijack_netrw = true,
-        update_cwd = true,
-        update_focused_file = {
-          enable = true,
-          update_cwd = true,
-          ignore_list = {}
-        },
-        system_open = {
-          cmd = nil,
-          args = {}
-        },
-        view = {
-          width = 30,
-          side = "left",
-          auto_resize = false,
-          mappings = {
-            custom_only = false,
-            list = {}
-          }
-        }
+        close_if_last_window = true,
+        hijack_netrw_behavior = "open_split",
       }
     end
   }
