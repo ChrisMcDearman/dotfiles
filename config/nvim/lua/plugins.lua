@@ -45,6 +45,15 @@ packer.init {
 return packer.startup(function(use)
   -- My plugins here
    use { "karb94/neoscroll.nvim" }
+   use {
+  'rmagatti/auto-session',
+  config = function()
+    require("auto-session").setup {
+      log_level = "error",
+      auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
+    }
+    end
+  }
   -- use { 'psliwka/vim-smoothie' }
   use { "simrat39/inlay-hints.nvim",
     config = function()

@@ -51,6 +51,10 @@ vim.notify = function (msg, log_level, _opts)
 ---
 vim.opt.termguicolors = true
 vim.cmd('colorscheme monokai-pro')
+-- change background colors to #181818
+vim.cmd('highlight Normal guibg=#181818')
+
+
 
 ---
 -- Titus Custom Markdown HUGO Image Insert
